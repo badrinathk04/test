@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    name: badri-prod-deploy
+    labels:
+      app: badri-prod
+spec:
+  replicas: 6
+  selector:
+    matchLabels:
+      app: badri-pod-template
+  template:
+    metadata:
+      name: badri-pod
+      labels:
+        app: badri-pod-template
+    spec:
+      containers:
+        - name: badri-container
+          image: 9743625/badri:2.0
+          ports:
+          - containerPort: 80
