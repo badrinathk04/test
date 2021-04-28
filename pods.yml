@@ -5,17 +5,8 @@ metadata:
     labels:
       app: badri-prod
 spec:
-  selector:
-    matchLabels:
-      app: badri-pod-template
-  template:
-    metadata:
-      name: badri-pod
-      labels:
-        app: badri-pod-template
-    spec:
       containers:
         - name: badri-container
           image: 9743625/badri:2.0
           ports:
-          - containerPort: 80
+          - containerPort: 8080
