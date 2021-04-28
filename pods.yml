@@ -5,7 +5,6 @@ metadata:
     labels:
       app: badri-prod
 spec:
-  replicas: 6
   selector:
     matchLabels:
       app: badri-pod-template
